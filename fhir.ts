@@ -28,4 +28,4 @@ let _FHIRClient = function(baseUrl: String, authType: BasicAuth | Bearer | null,
 
 
 
-export let FHIRClient = 
+export let FHIRClient = _FHIRClient
