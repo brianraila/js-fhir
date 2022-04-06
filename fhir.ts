@@ -25,7 +25,21 @@ let _FHIRClient = function(baseUrl: String, authType: BasicAuth | Bearer | null,
 
 }
 
+//pass or proxy function
 
+/*
+get resource
 
+mappingFunction = 
+{   
+    "function_id":"",
+    "resource":"",
+    "source":{}, "target":[],
+}
+
+function(mappingFunctions=[]){
+
+}
+*/
 
 export let FHIRClient = _FHIRClient
