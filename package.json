@@ -1,0 +1,32 @@
+{
+  "name": "js-fhir",
+  "version": "0.1.0",
+  "description": "A set of JS libraries for building offline-capable, mobile-first healthcare applications using the HL7® FHIR® standard with Javascript ",
+  "main": "index.js",
+  "dependencies": {
+    "@shoelace-style/shoelace": "^2.0.0-beta.72",
+    "fhir.js": "^0.0.22"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brianraila/js-fhir.git"
+  },
+  "keywords": [
+    "fhir",
+    "js"
+  ],
+  "author": "Brian R. Amolo <railamolo@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brianraila/js-fhir/issues"
+  },
+  "homepage": "https://github.com/brianraila/js-fhir#readme"
+}
