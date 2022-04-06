@@ -96,6 +96,11 @@
   resolved "https://registry.yarnpkg.com/@types/fhir/-/fhir-0.0.30.tgz#a0aec3b2d7dd2a7584474dac446ede5f9a4d7a13"
   integrity sha512-vDU62tUFeAYBVQThiWAfGd6D25TiLLDDS5pV19vim52FLpwWTBliLMvotbF4D/U+BmjxBKIuHGZgFnoh/HtV5g==
 
+"@types/node@^17.0.23":
+  version "17.0.23"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.23.tgz#3b41a6e643589ac6442bdbd7a4a3ded62f33f7da"
+  integrity sha512-UxDxWn7dl97rKVeVS61vErvw086aCYhDLyvRQZ5Rk65rZKepaFdm53GeqXaKBuOhED4e9uWq34IC3TdSdJJ2Gw==
+
 "@types/trusted-types@^2.0.2":
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@types/trusted-types/-/trusted-types-2.0.2.tgz#fc25ad9943bcac11cceb8168db4f275e0e72e756"
