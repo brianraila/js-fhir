@@ -1,11 +1,10 @@
 {
   "name": "js-fhir",
   "version": "0.1.0",
-  "description": "A set of JS libraries for building offline-capable, mobile-first healthcare applications using the HL7® FHIR® standard with Javascript ",
-  "main": "index.js",
+  "description": "A promise based HL7® FHIR® Client with first class support for Typescript",
+  "main": "src/js-fhir",
   "dependencies": {
-    "@shoelace-style/shoelace": "^2.0.0-beta.72",
-    "fhir.js": "^0.0.22"
+    "cross-fetch": "^3.1.5"
   },
   "devDependencies": {
     "@types/node": "^17.0.23",
