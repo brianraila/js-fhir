@@ -9,13 +9,20 @@ let FHIRfetch = async (params: fetchParams) => {
     }
     //To-do: replace with basicAuth configuration
 
+    let response = await fetch(params.url, { 
+        headers: params.headers, 
+        method:params.method,
+        ...(params.method !== 'GET') && {body:params.body}
+    },)
 
-
-    let response = await fetch(params.url, { headers: fetchParams.headers },)
-
+    let res: TextResponse = {
+        status: response.status,
+        responseCode: response.statusText,
+        content: response.body
+    }
+    return res
     //To-do: process response and response type
 }
-
 
 
 export class FHIRClient {
@@ -31,7 +38,7 @@ export class FHIRClient {
         this.baseUrl = baseUrl
         this.authType = authType
         if(!authType){
-
+            this.fetchParams = {...this.fetchParams, }
         }
         return
 
@@ -53,7 +60,7 @@ export class FHIRClient {
      */
     public async read(resource:String, id: String, fields?: String[]): TextResponse {
         // http://hapi.fhir.org/baseR4/Patient/1122268
-        this.fetchParams = {...this.fetchParams, requestUrl:`${this.baseUrl}/{resource}/{id}`}
+        this.fetchParams = {...this.fetchParams, requestUrl:`${this.baseUrl}/{resource}/{id}`, method:'GET'}
         this.response = await FHIRfetch(this.fetchParams)
         return this.response
     }
@@ -61,10 +68,9 @@ export class FHIRClient {
     /**
      * read
      */
-    public update() {
-        // this.response = await FHIRfetch(this.fetchParams)
+    public async update(resource: String, id: String, data: String) {
+        this.response = await FHIRfetch(this.fetchParams)
         return
-
 
     }
 
@@ -73,8 +79,7 @@ export class FHIRClient {
      */
     public async search(resource:String) {
         this.response = await FHIRfetch(this.fetchParams)
-
-        return
+        return this.response
 
 
     }
@@ -84,6 +89,10 @@ export class FHIRClient {
      */
     public async delete(resource:String, id: String) {
 
+        this.response = await FHIRfetch(this.fetchParams)
+        return this.response
+
+
     }
 
     /**
@@ -92,6 +101,7 @@ export class FHIRClient {
     public async save(resource: String, data: String, id?: String) {
 
         this.response = await FHIRfetch(this.fetchParams)
+        return this.response
         
 
     }

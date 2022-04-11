@@ -1,6 +1,7 @@
 import {FHIRClient} from './index'
+import
 
-let client = new FHIRClient("https://hapi.fhir.org")
+let client = new FHIRClient("http://hapi.fhir.org/baseR4")
 
 //Test Connection
 let testConnection = async () => {
@@ -8,4 +9,10 @@ let testConnection = async () => {
     console.log(res)
 }
 
+let testReadPatient = async () => {
+    let res:
+}
+
+
 testConnection()
+

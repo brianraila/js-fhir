@@ -12,6 +12,8 @@ export interface Bearer {
 export interface fetchParams {
     baseUrl:String
     authType?: Bearer | BasicAuth | null
+    method: String
+    data: String
 }
 
 
