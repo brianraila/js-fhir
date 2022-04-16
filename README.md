@@ -12,7 +12,7 @@ A promise based FHIR Client with first class support for Typescript.
 ### Installation
 
 ```
-yarn add js-fhir
+yarn add @amolo/js-fhir
 ```
 
 ### Note
