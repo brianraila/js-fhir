@@ -5,8 +5,8 @@ import { fetch } from 'cross-fetch'
 let FHIRfetch = async (params: fetchParams, parse: Boolean = true) => {
     let _defaultHeaders: any = {
         "Content-Type": 'application/json',
-        ...(params.authType === "bearer") && { "Authorization": `Bearer ${params.auth}` },
-        ...(params.authType === "basicAuth") && { "Authorization": `Basic ${params.auth}` },
+        ...(params.authType === "bearer") && { "Authorization": `Bearer ${isBasicAuth(params.auth)}` },
+        ...(params.authType === "basicAuth") && { "Authorization": `Basic ${isBearer(params.auth)}` },
     }
     //To-do: replace with basicAuth configuration
     try {
@@ -119,7 +119,7 @@ export class FHIRClient {
         }
         this.fetchParams = { ...this.fetchParams, 
             url: `${this.baseUrl}/${resource}/${id}`, 
-            method: 'PATCH',
+            method: 'PUT',
             data: JSON.stringify({...(JSON.parse(data))})
         }
         this.response = await FHIRfetch(this.fetchParams)

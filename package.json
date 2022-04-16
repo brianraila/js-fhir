@@ -23,7 +23,8 @@
     "fhir",
     "js"
   ],
-  "author": "Brian R. Amolo <railamolo@gmail.com>",
+  "author": "Brian R. Amolo <railamolo@gmail.com> (https://amolo.vercel.app)",
+  
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/brianraila/js-fhir/issues"
