@@ -1,7 +1,7 @@
 // To-do: Migrate each resource to seperate file
 
 
-export let resources: Array<String> = ["Account",
+export let resources: Array<string> = ["Account",
     "AllergyIntolerance",
     "BodySite",
     "CarePlan",
@@ -39,8 +39,11 @@ export let resources: Array<String> = ["Account",
     "NutritionOrder",
     "Observation",
     "Order",
+    "Patient",
+    "Practitioner",
     "Procedure",
     "ProcedureRequest",
+    "Questionnaire",
     "QuestionnaireResponse",
     "ReferralRequest",
     "RelatedPerson",
