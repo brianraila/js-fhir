@@ -1,5 +1,5 @@
 {
-  "name": "js-fhir",
+  "name": "@amolo/js-fhir",
   "version": "0.1.0",
   "description": "A promise based HL7® FHIR® Client with first class support for Typescript",
   "main": "src/js-fhir",
@@ -24,10 +24,13 @@
     "js"
   ],
   "author": "Brian R. Amolo <railamolo@gmail.com> (https://amolo.vercel.app)",
-  
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/brianraila/js-fhir/issues"
   },
-  "homepage": "https://github.com/brianraila/js-fhir#readme"
+  "readme": "README.md",
+  "homepage": "https://github.com/brianraila/js-fhir#readme",
+  "directories": {
+    "doc": "docs"
+  }
 }
