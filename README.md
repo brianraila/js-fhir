@@ -1,4 +1,4 @@
-## @amolo/js-fhir
+## @js-fhir/client
 
 The Javascript/Typescript FHIR Client
 
@@ -12,7 +12,7 @@ A promise based FHIR Client with first class support for Typescript.
 ### Installation
 
 ```
-yarn add @amolo/js-fhir
+yarn add @js-fhir/client
 ```
 
 ### Note
@@ -33,7 +33,7 @@ To communicate with the FHIR server, you can create instance of the FHIRClient, 
 
 ```
 
-import { FHIRClient } from '@amolo/js-fhir'
+import { FHIRClient } from '@js-fhir/client'
 
 config = {
     "baseUrl":"https://hapi.fhir.org"
@@ -46,7 +46,7 @@ config = {
 
 #### Read FHIR Resource.
 ````
-import {FHIRClient, JSONResponse } from '@amolo/js-fhir'
+import {FHIRClient, JSONResponse } from '@js-fhir/client'
 
 let client = new FHIRClient("http://hapi.fhir.org/baseR4")
 let RESOURCE: string = "Patient"
@@ -103,7 +103,7 @@ saveResourceWithId(RESOURCE_ID)
 
 #### Delete FHIR Resource
 ```
-import {FHIRClient} from '@amolo/js-fhir'
+import {FHIRClient} from '@js-fhir/client'
 
 let client = new FHIRClient("http://hapi.fhir.org/baseR4")
 let RESOURCE: string = "Patient"
