@@ -1,6 +1,6 @@
 {
   "name": "@js-fhir/client",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A promise based HL7® FHIR® Client with first class support for Typescript",
   "main": "./lib/js-fhir/client.js",
   "types": "./src/js-fhir/fhir.types.ts",
@@ -15,7 +15,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "npm:publish": "yarn publish --tag @js-fhir/client --access public"
+    "npm:publish": "yarn publish --access public"
   },
   "repository": {
     "type": "git",
