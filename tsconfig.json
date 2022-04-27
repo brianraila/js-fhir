@@ -6,6 +6,7 @@
         "noImplicitAny": false,
         "removeComments": true,
         "preserveConstEnums": true,
+        "declaration": true,
         "sourceMap": true,
         "target": "es5",
         "lib": [
@@ -18,6 +19,9 @@
         "moduleResolution": "node",
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
-        "resolveJsonModule":true
+        "resolveJsonModule":true,
+        "typeRoots": [
+            "./src/js-fhir/fhir"
+        ]
     }
 }

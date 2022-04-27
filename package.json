@@ -1,20 +1,22 @@
 {
   "name": "@js-fhir/client",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "A promise based HL7® FHIR® Client with first class support for Typescript",
-  "main": "./lib/js-fhir/client.js",
-  "types": "./src/js-fhir/fhir.types.ts",
+  "main": "./lib/js-fhir/fhir/client.js",
+  "types": "./lib/js-fhir/fhir/client.d.ts",
   "dependencies": {
     "cross-fetch": "^3.1.5"
   },
   "devDependencies": {
     "@types/node": "^17.0.24",
+    "@types/reflect-metadata": "^0.1.0",
     "nodemon": "^2.0.15",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "yarn tsc --project tsconfig.json",
     "npm:publish": "yarn publish --access public"
   },
   "repository": {

@@ -1,6 +1,17 @@
-import { BasicAuth, Bearer, fetchParams, JSONResponse, TextResponse, isBearer, isBasicAuth, ClientError } from "./fhir.types"
-import { resources } from './../resources'
+import { resources } from '../resources'
 import { fetch } from 'cross-fetch'
+import type { BasicAuth, Bearer, fetchParams, JSONResponse, TextResponse, ClientError } from "./index"
+
+
+function isBearer(object: any): object is Bearer {
+    return 'token' in object;
+}
+
+function isBasicAuth(object: any): object is BasicAuth {
+    return 'pass' in object && 'user' in object;
+}
+
+
 
 let FHIRfetch = async (params: fetchParams, parse: Boolean = true) => {
     let _defaultHeaders: any = {
@@ -97,13 +108,13 @@ export class FHIRClient {
     /**
      * read resource
      */
-    public async read(resource: string, id: string, fields?: string[], parse: Boolean = true): Promise<TextResponse | JSONResponse | ClientError> {
+    public async read(resource: string, id?: string, fields?: string[], parse: Boolean = true): Promise<TextResponse | JSONResponse | ClientError> {
         // to-do - return specified fields
         if (resources.indexOf(resource) < 0) {
             console.error({ error: "invalid resource name" })
             return {statusText: "Invalid Resource Name", content:"Unsupported FHIR Resource name provided", status:900 }
         }
-        this.fetchParams = { ...this.fetchParams, url: `${this.baseUrl}/${resource}/${id}`, method: 'GET' }
+        this.fetchParams = { ...this.fetchParams, url: id ? `${this.baseUrl}/${resource}/${id}`: `${this.baseUrl}/${resource}` , method: 'GET' }
         this.response = await FHIRfetch(this.fetchParams, parse = parse)
         return this.response
     }
@@ -186,23 +197,4 @@ export class FHIRClient {
 
 
     }
-
-
 }
-
-//pass or proxy function
-
-/*
-get resource
-
-mappingFunction = 
-{   
-    "function_id":"",
-    "resource":"",
-    "source":{}, "target":[],
-}
-
-function(mappingFunctions=[]){
-
-}
-*/
