@@ -1,3 +1,5 @@
+declare module '@js-fhir/client';
+
 export type BasicAuth = {
     user: string
     pass: string
