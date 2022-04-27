@@ -20,6 +20,5 @@
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
         "resolveJsonModule":true,
-    },
-    "include": ["src/js-fhir/fhir/index.d.ts"]
+    }
 }
