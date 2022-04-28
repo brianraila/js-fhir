@@ -1,4 +1,4 @@
-import {FHIRClient} from '../js-fhir/fhir/client'
+import {FHIRClient} from '../js-fhir/fhir'
 import * as patient from './sample_resources/Patient.json'
 
 let FHIR_BASE: string = "http://hapi.fhir.org/baseR4"

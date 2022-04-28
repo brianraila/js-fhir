@@ -1,4 +1,4 @@
-declare module '@js-fhir/client';
+declare module 'index';
 
 export type BasicAuth = {
     user: string

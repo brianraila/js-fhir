@@ -1,4 +1,4 @@
-import {FHIRClient} from '../js-fhir/fhir/client'
+import {FHIRClient} from '../js-fhir/fhir'
 import {resources} from '../js-fhir/resources'
 
 

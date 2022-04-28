@@ -1,4 +1,4 @@
-import {FHIRClient} from '../js-fhir/fhir/client'
+import {FHIRClient} from '../js-fhir/fhir'
 
 let client = new FHIRClient("http://hapi.fhir.org/baseR4")
 let RESOURCE: string = "Patient"
