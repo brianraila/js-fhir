@@ -1,4 +1,4 @@
-import type { BasicAuth, Bearer, fetchParams, JSONResponse, TextResponse, ClientError } from "./index";
+import type { BasicAuth, Bearer, fetchParams, JSONResponse, TextResponse, ClientError } from "./client";
 export declare class FHIRClient {
     baseUrl: String;
     authType: String;

@@ -1,6 +1,6 @@
 import { resources } from '../resources'
 import { fetch } from 'cross-fetch'
-import type { BasicAuth, Bearer, fetchParams, JSONResponse, TextResponse, ClientError } from "./index"
+import type { BasicAuth, Bearer, fetchParams, JSONResponse, TextResponse, ClientError } from "./client"
 
 
 function isBearer(object: any): object is Bearer {
@@ -194,7 +194,5 @@ export class FHIRClient {
         }
         this.response = await FHIRfetch(this.fetchParams)
         return this.response
-
-
     }
 }
