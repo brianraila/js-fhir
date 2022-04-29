@@ -1,6 +1,6 @@
 {
   "name": "@js-fhir/client",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "A promise based HL7® FHIR® Client with first class support for Typescript",
   "main": "./lib/js-fhir/fhir/index.js",
   "types": "./lib/js-fhir/fhir/client.d.ts",
